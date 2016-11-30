@@ -1,0 +1,5 @@
+1. Cargo los estados en el main.js
+2. Cargo los estados en el index.html
+3. Empieza cargando el main.js que llama al estado Boot.
+
+4. Voy saltando de un estado a otro.

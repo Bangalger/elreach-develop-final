@@ -1,0 +1,38 @@
+1. Me traigo el TODOS los equipos de un usuario
+
+2. Me traigo el nivel de UN equipo específico que ya almacené en el punto 1
+
+SELECT * FROM `teams` INNER JOIN levels_teams ON teams.id=levels_teams.team_id INNER JOIN levels ON levels_teams.level_id = levels.id WHERE teams.id = 	$id_equipo_que_clickeó
+
+ME traigo TODOS los WARNING de ese equipo en su nivel
+
+// ----> Error --- > SELECT * FROM warnings INNER JOIN teams_warnings_levels ON $level_id =  teams_warnings_levels.level_id AND $team_id = teams_warnings_levels.level_id // ----- //
+
+SELECT * FROM warnings INNER JOIN teams_warnings_levels ON teams_warnings_levels.warning_id = warnings.id WHERE teams_warnings_levels.team_id = 1 AND teams_warnings_levels.level_id = 1
+
+
+EL INNER JOIN hace si o si la asociación entre dos tablas, tiene que existir un ON donde se asocien los campos en común
+
+Seleccioná de warning INNER JOIN (LA TABLA A UNIR) ON (CAMPOS EN COMUN) WHERE (LA CONDICIÖN QUE QUIERA)
+
+SELECT teams_users.user_id FROM teams_users WHERE teams_users.team_id = 1 AND teams_users.user_id != 1
+
+
+// LOGIN
+
+SELECT * FROM users WHERE users.id = X
+
+
+ON DELETE CASCADE --> Para eliminar el team y todas sus relaciones una vez que el team ganó.
+
+
+
+
+Netbeans
+Xdebug --> extension para debuggear
+
+
+NOTAS PHASER
+
+Las variables que manejo por ajax, las tengo que manejar dentro de las funciones de phaser.
+
